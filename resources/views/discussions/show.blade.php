@@ -86,6 +86,8 @@
 					<a href="{{route('reply.like',['id' => $reply->id]) }}" class="float-right btn btn-sm btn-info">&nbsp;like&nbsp;<span class="badge bg-primary">{{$reply->likes->count()}}</span></a>
 				@endif
 
+				{{-- button to edit your reply --}}
+				
 				@if (!$reply->best_answer)
 					@if (Auth::id() == $reply->user_id)
 						<a href="{{route('reply.edit',['id' => $reply->id])}}" class="btn btn-sm btn-primary float-left">edit</a>

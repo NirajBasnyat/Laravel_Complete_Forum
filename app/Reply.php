@@ -26,20 +26,16 @@ class Reply extends Model
 
     public function is_liked_by_auth_user()
     {
-        //like of current user
-        $id = Auth::id();
-
-        //store all the likes in a reply
-        $likers = array();
+        $id = Auth::id();  //like of current user
+        
+        $likers = array(); //store all the likes in a reply
 
         foreach ($this->likes as $like)
         {
-            //sending likes into likers array
-            array_push($likers, $like->user_id); 
+            array_push($likers, $like->user_id);  //sending likes into likers array
         }
-
-        //check if you've liked reply or not
-        if (in_array($id, $likers))
+        
+        if (in_array($id, $likers)) //check if you've liked reply or not
         {
             return true;
         } 
@@ -47,8 +43,5 @@ class Reply extends Model
         {
              return false;
         }
-        
-
-
     }
 }

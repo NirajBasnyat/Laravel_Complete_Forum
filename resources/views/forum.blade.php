@@ -10,11 +10,10 @@
                  <a href="{{route('discussion.show',['slug' => $discussion->slug])}}" class="btn btn-success btn-sm float-right">View</a>
 
                  @if ($discussion->has_best_answer())
-                    <a href="#" class="btn btn-dark btn-sm float-right mr-2">closed</a>
+                    <a href="#" class="btn btn-outline-dark btn-sm float-right mr-2">closed</a>
                  @else
-                    <a href="#" class="btn btn-primary btn-sm float-right mr-2">open</a>
+                    <a href="#" class="btn btn-outline-light btn-sm float-right mr-2">open</a>
                  @endif
-                 
             </div>
              
             <div class="card-body">
@@ -24,7 +23,7 @@
 
             <div class="card-footer">
                 <span><strong>Replies: {{$discussion->replies->count()}}</strong></span>
-                <a href="{{route('channels',['slug' => $discussion->channel->slug])}}" class="btn btn-sm btn-info float-right">{{$discussion->channel->title}}</a>
+                <a href="{{route('channels',['slug' => $discussion->channel->slug])}}" class="btn btn-sm btn-outline-info float-right">{{$discussion->channel->title}}</a>
             </div>
          </div>
     @endforeach

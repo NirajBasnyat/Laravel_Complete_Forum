@@ -13,8 +13,8 @@ class ForumsController extends Controller
     public function index()
     {
     	//$discussions = Discussion::orderBy('created_at','Desc')->paginate(3);
-        switch (request('filter')) {
-
+        switch (request('filter'))
+         {
             case 'me':
                 $results = Discussion::where('user_id',Auth::id())->paginate(3);
                 break;

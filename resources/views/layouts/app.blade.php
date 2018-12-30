@@ -41,8 +41,8 @@
                           @if (Auth::check())
                             <li class="list-group-item mb-1"><a href="/forum?filter=me" style="text-decoration: none;">My discussions</a></li>
                           @endif
-                          <li class="list-group-item mb-1"><a href="/forum?filter=solved" style="text-decoration: none;">Answered discussions</a></li>
-                          <li class="list-group-item mb-1"><a href="/forum?filter=unsolved" style="text-decoration: none;">Unanswered discussions</a></li>
+                            <li class="list-group-item mb-1"><a href="/forum?filter=solved" style="text-decoration: none;">Answered discussions</a></li>
+                            <li class="list-group-item mb-1"><a href="/forum?filter=unsolved" style="text-decoration: none;">Unanswered discussions</a></li>
                           @if (Auth::check())
                             @if (Auth::user()->admin)
                                <li class="list-group-item"><a href="/channel" style="text-decoration: none;">All channels</a></li>

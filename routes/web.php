@@ -112,7 +112,5 @@ Route::group(['middleware' => 'auth'],function(){
 		'as' => 'unwatch'
 	]);
 
-	
-
 });
 

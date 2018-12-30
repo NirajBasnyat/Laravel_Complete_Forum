@@ -82,4 +82,6 @@ class DiscussionsController extends Controller
         return redirect()->route('discussion.show',['slug' => $discussion->slug]);
     }
 
+    
+
 }
